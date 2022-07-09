@@ -1,1 +1,1 @@
-# PracticeDSA
+# DSA Practice with LeetCode Grind
