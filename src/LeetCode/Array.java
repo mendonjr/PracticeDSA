@@ -5,14 +5,16 @@ import java.util.List;
 public class Array {
     public static void main(String[] args) {
         System.out.println("Hello World");
-        int[] nums = {2, 3, 5, 1, 3};
+        int[] nums = {1,1,1,1};
         // int[][] accounts = {{1, 2, 3}, {3, 2, 1}};
 
         // int[] ans = buildArray(nums);
         //int ans = maximumWealth(accounts);
         // int[] ans = shuffle(nums, 2);
         List<Boolean> ans = kidsWithCandies(nums, 3);
-        System.out.println(ans);
+
+        int answ = numIdenticalPairs(nums);
+        System.out.println(answ);
     }
 
     static int[] buildArray(int[] nums) {
@@ -69,12 +71,26 @@ public class Array {
             for (int candy : candies) {
                 if (temp < candy) {
                     isGreater = false;
+                    break;
                 }
             }
             result.add(isGreater);
         }
         return result;
 
+
+    }
+
+    static int numIdenticalPairs(int[] nums) {
+        int count = 0;
+        for(int i=0;i<=nums.length-1;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i]==nums[j]){
+                    count++;
+                }
+            }
+        }
+        return count;
 
     }
 
