@@ -12,6 +12,7 @@ public class Array {
         //int ans = maximumWealth(accounts);
         // int[] ans = shuffle(nums, 2);
         List<Boolean> ans = kidsWithCandies(nums, 3);
+       int answ =  numIdenticalPairs(nums);
         System.out.println(ans);
     }
 
